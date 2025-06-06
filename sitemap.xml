@@ -2,10 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://avendettaforyou.dev/youtube/</loc>
-    <lastmod>2025-06-03T10:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://avendettaforyou.dev/</loc>
+    <lastmod>2025-06-05T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avendettaforyou.dev/store/flat-bundle/</loc>
+    <lastmod>2025-06-05T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avendettaforyou.dev/store/gothic-bundle/</loc>
+    <lastmod>2025-06-05T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avendettaforyou.dev/store/modern-bundle/</loc>
+    <lastmod>2025-06-05T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avendettaforyou.dev/store/retro-bundle/</loc>
+    <lastmod>2025-06-05T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avendettaforyou.dev/store/twilight-bundle/</loc>
+    <lastmod>2025-06-05T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avendettaforyou.dev/store/</loc>
+    <lastmod>2025-06-05T10:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://avendettaforyou.dev/youtube/</loc>
     <lastmod>2025-06-03T10:30:00+00:00</lastmod>
   </url><url>
     <loc>https://avendettaforyou.dev/youtube/cryptids/</loc>
