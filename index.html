@@ -171,51 +171,79 @@ window.addEventListener("load", function () {
     },
     theme: "classic",
     position: "bottom-right",
-    type: "opt-in", 
+    type: "opt-in",
     content: {
-      message: "We use cookies to enhance your experience, analyze site usage, and serve personalized ads. You can manage your preferences.",
+      message: "We use cookies to improve your experience and serve personalized ads. You can manage your preferences.",
       allow: "Accept All",
       deny: "Reject All",
+      customize: "Cookie Settings",
       link: "Privacy Policy",
       href: "/privacy-policy/"
     },
+    elements: {
+      customize: '<a aria-label="customize" tabindex="0" class="cc-btn cc-customize">{{customize}}</a>'
+    },
+    cookie: {
+      name: "cookie_consent",
+      expiryDays: 365,
+      path: "/"
+    },
+    categories: {
+      necessary: {
+        enabled: true,
+        readOnly: true,
+        description: "Essential for basic website functionality."
+      },
+      analytics: {
+        enabled: false,
+        description: "Helps us understand site usage to improve user experience."
+      },
+      marketing: {
+        enabled: false,
+        description: "Used for personalized advertising and tracking across websites."
+      }
+    },
     onInitialise: function (status) {
       if (this.hasConsented()) {
-        loadNonEssentialScripts();
+        loadConsentedScripts(this.getConsent());
       }
     },
     onStatusChange: function (status) {
       if (this.hasConsented()) {
-        loadNonEssentialScripts();
+        loadConsentedScripts(this.getConsent());
       } else {
-        disableNonEssentialScripts();
+        disableScripts();
       }
     },
     onRevokeChoice: function () {
-      disableNonEssentialScripts();
+      disableScripts();
     }
   });
 
-  function loadNonEssentialScripts() {
-    if (!window.adsbygoogleLoaded) {
-      window.adsbygoogleLoaded = true;
-      const adsScript = document.createElement('script');
-      adsScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103198214761849";
-      adsScript.async = true;
-      adsScript.crossOrigin = "anonymous";
-      document.head.appendChild(adsScript);
-      console.log("Google AdSense loaded after consent");
+  function loadConsentedScripts(consent) {
+    if (consent.marketing && !window.adsenseLoaded) {
+      window.adsenseLoaded = true;
+      const adScript = document.createElement('script');
+      adScript.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103198214761849";
+      adScript.async = true;
+      adScript.crossOrigin = "anonymous";
+      document.head.appendChild(adScript);
+      console.log("Marketing consent given, AdSense loaded.");
     }
 
-    
+    if (consent.analytics && !window.analyticsLoaded) {
+      window.analyticsLoaded = true;
+      
+    }
   }
 
-  function disableNonEssentialScripts() {
-    console.log("Consent not granted. Ads and tracking disabled.");
+  function disableScripts() {
+    console.log("Non-essential scripts disabled due to lack of consent.");
     
   }
 });
 </script>
+
 </footer>
 
             
