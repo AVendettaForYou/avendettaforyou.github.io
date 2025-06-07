@@ -230,6 +230,7 @@
 
             
                 <footer class="footer">
+
     
     <div class="footer__inner">
         <div class="footer__content">
@@ -242,6 +243,47 @@
     </div>
     
     
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+<script>
+window.cookieconsent.initialise({
+  palette: {
+    popup: { background: '#222' },
+    button: { background: '#14a7d0' }
+  },
+  theme: 'classic',
+  position: 'bottom-right',
+  type: 'opt-in', 
+  content: {
+    message: 'This site uses cookies for analytics and personalized ads.',
+    allow: 'Accept',
+    deny: 'Reject',
+    link: 'Learn more',
+    href: '/privacy-policy/' 
+  },
+  onInitialise: function (status) {
+    var didConsent = this.hasConsented();
+    if (didConsent) {
+      
+      
+    }
+  },
+  onStatusChange: function (status, chosenBefore) {
+    var didConsent = this.hasConsented();
+    if (didConsent) {
+      
+    } else {
+      
+      
+    }
+  }
+});
+
+
+
+</script>
+
 </footer>
 
             
