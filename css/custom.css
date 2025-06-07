@@ -14,19 +14,67 @@ body.scrolled header.header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Reduce overall page padding */
+.main {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 100%; /* Or set your preferred width like 90% */
+}
+
+/* Adjust header/footer if needed */
+.header,
+.footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Optional: Widen content container */
+.post-content, .content, .page-content {
+  max-width: 100%; /* Adjust to desired width */
+}
+
+.post-title {
+  all: unset;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0 1rem;
+
+  /* Restore expected styles */
+  font-size: 2rem;       /* Adjust to match theme */
+  font-weight: bold;
+  color: #fff;           /* Or inherit if preferred */
+  line-height: 1.2;
+}
+
+.post-title a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
 .media-grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 .media-card {
-  padding: 0.75rem 1rem 1.5rem 1rem; /* Top, Right, Bottom, Left */
-  background-color: rgb(105, 105, 105);
-  color: #fff;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.014);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
+}
+
+.article .media-card {
+  padding: 5px;
 }
 
 .media-card h2 {
@@ -114,6 +162,18 @@ body.scrolled header.header {
   margin-bottom: 1.5rem;
 }
 
+.gallery-category {
+  background: rgba(255, 255, 255, 0.014);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
+}
 
 .youtube {
   position: relative;
@@ -147,7 +207,14 @@ body.scrolled header.header {
   background: #007bff;
 }
 
-.post {
+/* Override default post width */
+.main .posts {
+  max-width: 100% !important; /* Or 90%, or 1200px if you want a cap */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.posts {
   background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black */
   padding: 2rem;
   border-radius: 12px;
@@ -156,7 +223,11 @@ body.scrolled header.header {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   color: #fff;
   margin: 2rem auto;
-  max-width: 960px;
+  max-width: 100%;
+}
+
+.posts h1 {
+  text-align: center;
 }
 
 .download-btn {
@@ -169,6 +240,12 @@ body.scrolled header.header {
   font-weight: bold;
   transition: background-color 0.3s;
 }
+
+.posts-title {
+  text-align: center;
+}
+
+
 
 .download-btn:hover {
   background-color: #772ce8;
@@ -190,14 +267,16 @@ body.scrolled header.header {
 }
 
 .store-section-bg {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.014);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
   padding: 2rem;
-  border-radius: 16px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   margin: 2rem auto;
-  max-width: 1000px;
+  width: 50%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
 }
 
 .store-section-bg h1, 
@@ -215,6 +294,7 @@ body.scrolled header.header {
   color: #e0dbdb;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
+  margin-bottom: 2rem;
 }
 
 .donate-container p {
