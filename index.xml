@@ -10,18 +10,32 @@
     <lastBuildDate>Sat, 07 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://avendettaforyou.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Contact</title>
+      <title></title>
       <link>https://avendettaforyou.dev/contact/</link>
       <pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://avendettaforyou.dev/contact/</guid>
-      <description>&lt;div class=&#34;contact-center&#34;&gt;&#xD;&#xA;&lt;h1 id=&#34;contact&#34;&gt;Contact&lt;/h1&gt;&#xA;&lt;p&gt;Feel free to reach out with any questions, feedback, or business inquiries.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📧 Email: &lt;a href=&#34;mailto:avendettaforyou@gmail.com&#34;&gt;avendettaforyou@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;</description>
+      <description>&lt;div class=&#34;privacy-center&#34;&gt;&#xD;&#xA;&lt;h1 id=&#34;contact&#34;&gt;Contact&lt;/h1&gt;&#xA;&lt;p&gt;Feel free to reach out with any questions, feedback, or business inquiries.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;📧 Email: &lt;a href=&#34;mailto:avendettaforyou@gmail.com&#34;&gt;avendettaforyou@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/div&gt;</description>
     </item>
     <item>
-      <title>Privacy Policy</title>
+      <title></title>
+      <link>https://avendettaforyou.dev/disclaimer/</link>
+      <pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://avendettaforyou.dev/disclaimer/</guid>
+      <description>&lt;div class=&#34;privacy-center&#34;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;The information provided by AVendettaForYou (“we,” “us,” or “our”) on this website is for general informational purposes only. All content, including text, images, videos, and other materials, is provided &amp;ldquo;as is&amp;rdquo; without warranties of any kind, either express or implied.&lt;/p&gt;&#xA;&lt;p&gt;We make no representations or warranties about the accuracy, reliability, completeness, or timeliness of the content. Any reliance you place on such information is strictly at your own risk.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://avendettaforyou.dev/privacy-policy/</link>
       <pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://avendettaforyou.dev/privacy-policy/</guid>
       <description>&lt;div class=&#34;privacy-center&#34;&gt;&#xD;&#xA;&lt;h1 id=&#34;privacy-policy&#34;&gt;Privacy Policy&lt;/h1&gt;&#xA;&lt;p&gt;Welcome to avendettaforyou.dev. Your privacy is important to us.&lt;/p&gt;&#xA;&lt;h2 id=&#34;information-we-collect&#34;&gt;Information We Collect&lt;/h2&gt;&#xA;&lt;p&gt;We collect personal information you provide directly (such as email addresses when subscribing) and certain data automatically through cookies and similar technologies, including IP addresses and browsing behavior.&lt;/p&gt;&#xA;&lt;h2 id=&#34;use-of-information&#34;&gt;Use of Information&lt;/h2&gt;&#xA;&lt;p&gt;We use this information to:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Improve your experience on our website&lt;/li&gt;&#xA;&lt;li&gt;Serve relevant ads through third-party services like Google AdSense&lt;/li&gt;&#xA;&lt;li&gt;Analyze website traffic and usage patterns&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;google-adsense-and-cookies&#34;&gt;Google AdSense and Cookies&lt;/h2&gt;&#xA;&lt;p&gt;Our site uses Google AdSense, which may place cookies and collect data about your browsing habits to deliver personalized ads. Google’s use of cookies enables it to serve ads based on your prior visits to our site or other sites on the internet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://avendettaforyou.dev/terms/</link>
+      <pubDate>Sat, 07 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://avendettaforyou.dev/terms/</guid>
+      <description>&lt;div class=&#34;privacy-center&#34;&gt;&#xD;&#xA;&lt;p&gt;&lt;strong&gt;Terms &amp;amp; Conditions&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Welcome to AVendettaForYou. By accessing or using this website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use of Website&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;You agree to use this website only for lawful purposes and in a way that does not infringe the rights of others or restrict or inhibit anyone else’s use and enjoyment of the website.&lt;/p&gt;&#xA;&lt;p&gt;You must not use this website to transmit or distribute any material that is unlawful, harmful, defamatory, obscene, or otherwise objectionable.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Resident Evil</title>
