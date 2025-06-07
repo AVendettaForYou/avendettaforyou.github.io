@@ -3,8 +3,8 @@ Personal website:
 https://avendettaforyou.dev
 
 Implemented:
-Gallery, IRL, Youtube
+Gallery, Youtube, Store (Twitch Panels Currently)
 
 Planned:
-Twitch Templates
+Store (Full Twitch Overlays + Option for commissions)
 Merch

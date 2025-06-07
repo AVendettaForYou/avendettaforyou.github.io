@@ -53,7 +53,13 @@ body.scrolled header.header {
   color: inherit;
 }
 
-
+.media-card-instruction {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;   /* This centers the text */
+  font-style: italic;
+}
 
 .media-grid {
   display: grid;
@@ -81,6 +87,7 @@ body.scrolled header.header {
   margin: 0 0 0.5rem 0; /* No top margin */
   padding: 0;
   line-height: 1.2;
+  text-align: center;
 }
 
 .media-card h2 a {
