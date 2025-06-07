@@ -77,8 +77,6 @@
 
 
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103198214761849"
-     crossorigin="anonymous"></script>
     </head>
 
     
@@ -156,45 +154,117 @@
     </div>
     
     
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <style>
+  #cookie-consent-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #222;
+    color: white;
+    padding: 1em;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+  }
+  #cookie-consent-banner p {
+    margin: 0;
+    flex: 1 1 60%;
+  }
+  #cookie-consent-banner button {
+    margin-left: 0.5em;
+    background: #14a7d0;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  #cookie-consent-banner a {
+    color: #14a7d0;
+    text-decoration: underline;
+  }
+</style>
+
+<div id="cookie-consent-banner" aria-live="polite" role="dialog" aria-label="Cookie consent banner" style="display:none;">
+  <p>
+    We use cookies to enhance your experience, analyze site usage, and for marketing. 
+    <a href="https://avendettaforyou.dev/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+  </p>
+  <div>
+    <button id="cookie-consent-accept">Accept All</button>
+    <button id="cookie-consent-reject">Reject All</button>
+  </div>
+</div>
 
 <script>
-window.cookieconsent.initialise({
-  palette: {
-    popup: { background: '#222' },
-    button: { background: '#14a7d0' }
-  },
-  theme: 'classic',
-  position: 'bottom-right',
-  type: 'opt-in', 
-  content: {
-    message: 'This site uses cookies for analytics and personalized ads.',
-    allow: 'Accept',
-    deny: 'Reject',
-    link: 'Learn more',
-    href: '/privacy-policy/' 
-  },
-  onInitialise: function (status) {
-    var didConsent = this.hasConsented();
-    if (didConsent) {
-      
-      
+  (function() {
+    var consentName = "site_cookie_consent";
+    var banner = document.getElementById("cookie-consent-banner");
+    var acceptBtn = document.getElementById("cookie-consent-accept");
+    var rejectBtn = document.getElementById("cookie-consent-reject");
+
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
     }
-  },
-  onStatusChange: function (status, chosenBefore) {
-    var didConsent = this.hasConsented();
-    if (didConsent) {
-      
-    } else {
-      
-      
+
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days*24*60*60*1000);
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + value + expires + "; path=/; SameSite=Lax";
     }
-  }
-});
+    function loadNonEssentialScripts() {
+      if (!window.adsbygoogleLoaded) {
+        window.adsbygoogleLoaded = true;
 
+        var adsScript = document.createElement('script');
+        adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103198214761849';
+        adsScript.async = true;
+        adsScript.crossOrigin = 'anonymous';
+        document.head.appendChild(adsScript);
 
+        
+      }
+    }
+    }
 
+    function checkConsent() {
+      var consent = getCookie(consentName);
+      if (consent === "accepted") {
+        banner.style.display = "none";
+        loadNonEssentialScripts();
+      } else if (consent === "rejected") {
+        banner.style.display = "none";
+        
+        console.log("User rejected cookies. Non-essential scripts blocked.");
+      } else {
+        banner.style.display = "flex";
+      }
+    }
+
+    acceptBtn.addEventListener("click", function() {
+      setCookie(consentName, "accepted", 365);
+      banner.style.display = "none";
+      loadNonEssentialScripts();
+    });
+
+    rejectBtn.addEventListener("click", function() {
+      setCookie(consentName, "rejected", 365);
+      banner.style.display = "none";
+      
+    });
+
+    
+    checkConsent();
+  })();
 </script>
 
 </footer>
