@@ -1,26 +1,35 @@
+/* GLOBAL RESET & BOX-SIZING */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* BODY BACKGROUND & EFFECT */
 body {
   background: url('/img/bg/bg-orbs.png') no-repeat center center fixed;
   background-size: cover;
   background-color: #111; /* fallback */
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #eee;
 }
 
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
   filter: blur(40px);
   z-index: -1;
 }
 
-/* Make the Hello-Friend-NG header sticky */
+/* HEADER - STICKY & STYLING */
 header.header {
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: #111; /* Match theme or change */
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  background-color: #111;
+  padding: 0.5em 1rem;
   border-bottom: 1px solid #333;
   transition: box-shadow 0.3s ease;
 }
@@ -29,20 +38,18 @@ body.scrolled header.header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Reduce overall page padding */
+/* PAGE LAYOUT */
 .main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  max-width: 100%; /* Or set your preferred width like 90% */
+  padding: 0 1rem;
+  max-width: 100%;
 }
 
-/* Adjust header/footer if needed */
 .header,
 .footer {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 
+/* POST TITLE */
 .post-title {
   all: unset;
   display: block;
@@ -55,16 +62,18 @@ body.scrolled header.header {
   line-height: 1.2;
 }
 
+.post-title a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* POST CONTENT */
 .post-content {
   background: rgba(255, 255, 255, 0.014);
 }
 
-.post-title a {
-  display: inline-block;
-  text-decoration: none;
-  color: inherit;
-}
-
+/* MEDIA CARD INSTRUCTION */
 .media-card-instruction {
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -73,6 +82,7 @@ body.scrolled header.header {
   font-style: italic;
 }
 
+/* MEDIA GRID */
 .media-grid {
   display: flex;
   flex-wrap: wrap;
@@ -80,11 +90,11 @@ body.scrolled header.header {
   justify-content: center;
 }
 
+/* MEDIA CARD */
 .media-card {
   background: rgba(255, 255, 255, 0.014);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 2rem;
@@ -93,6 +103,7 @@ body.scrolled header.header {
   max-width: 350px;
   box-shadow: 0 15px 15px rgba(145, 71, 255, 0.5);
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .media-card:hover {
@@ -114,25 +125,27 @@ body.scrolled header.header {
   padding: 5px;
 }
 
-.content .post article h2 {
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* MEDIA CARD HEADERS */
 .media-card h2 {
-  margin: 0 0 0.5rem 0;
-  padding: 0;
+  margin: 0 0 0.5rem;
   line-height: 1.2;
   text-align: center;
 }
 
 .media-card h2 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
+/* POST ARTICLE HEADINGS */
+.content .post article h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* LIGHTBOX GALLERY */
 .lightbox-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -149,9 +162,9 @@ body.scrolled header.header {
 }
 
 .lightbox-gallery img.thumb {
-  display: block;
   width: 260px;
   height: auto;
+  display: block;
   transition: transform 0.2s ease;
   border-radius: 12px;
 }
@@ -160,6 +173,7 @@ body.scrolled header.header {
   transform: scale(1.05);
 }
 
+/* MINI GALLERY */
 .mini-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -185,18 +199,18 @@ body.scrolled header.header {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: zoom-in;
   z-index: 1;
+  transform-origin: center center;
 }
 
 .mini-gallery img.thumb.hover-zoom:hover {
   transform: scale(2.2) translate(10px, -10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  z-index: 20;
   position: relative;
-  transform-origin: center center;
-  cursor: zoom-in;
+  z-index: 20;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* MINI GALLERY CONTAINER */
 .mini-gallery-container {
   background-color: rgba(20, 20, 20, 0.4);
   padding: 1rem;
@@ -204,25 +218,26 @@ body.scrolled header.header {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 }
 
+/* GALLERY CATEGORY */
 .gallery-category {
   background: rgba(255, 255, 255, 0.014);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  box-sizing: border-box;
   padding: 0.5rem;
   margin: 2rem auto;
   max-width: 90%;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   transition: background 0.3s ease;
+  box-sizing: border-box;
 }
 
+/* GALLERY GRID */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -231,6 +246,7 @@ body.scrolled header.header {
   padding: 0;
 }
 
+/* GALLERY CARD */
 .gallery-card {
   background: rgba(255, 255, 255, 0.014);
   border-radius: 16px;
@@ -260,6 +276,7 @@ body.scrolled header.header {
   transform: scale(1.03);
 }
 
+/* GALLERY CAPTION */
 .gallery-caption {
   padding: 0.75rem 1rem;
   font-size: 0.85rem;
@@ -268,9 +285,29 @@ body.scrolled header.header {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
+.gallery-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #18032e, #190538);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 15px rgba(37, 117, 252, 0.4);
+}
+.gallery-intro h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+}
+.gallery-intro p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+
+/* YOUTUBE EMBEDS */
 .youtube {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
 }
@@ -278,36 +315,53 @@ body.scrolled header.header {
 .youtube iframe {
   position: absolute;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   border: 0;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* PRIVACY CENTER */
 .privacy-center {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
 }
 
-.download-link {
+/* DOWNLOAD LINK BUTTONS */
+.download-link,
+.download-btn {
   display: inline-block;
   background: #1e90ff;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.download-link:hover {
+.download-link:hover,
+.download-btn:hover {
   background: #007bff;
 }
 
+.download-btn {
+  background-color: #9147ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.download-btn:hover {
+  background-color: #772ce8;
+}
+
+/* POSTS */
 .main .posts {
   max-width: 100% !important;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 
 .posts {
@@ -326,25 +380,11 @@ body.scrolled header.header {
   text-align: center;
 }
 
-.download-btn {
-  display: inline-block;
-  background-color: #9147ff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
 .posts-title {
   text-align: center;
 }
 
-.download-btn:hover {
-  background-color: #772ce8;
-}
-
+/* PREVIEW IMAGE */
 .preview-image {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 8px;
@@ -359,6 +399,7 @@ body.scrolled header.header {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* STORE SECTION */
 .store-section-bg {
   background: rgba(255, 255, 255, 0.014);
   backdrop-filter: blur(10px);
@@ -371,13 +412,15 @@ body.scrolled header.header {
   max-width: 1000px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   transition: background 0.3s ease;
+  box-sizing: border-box;
 }
 
-.store-section-bg h1, 
+.store-section-bg h1,
 .store-section-bg p {
-  text-align: center
+  text-align: center;
 }
 
+/* DONATE CONTAINER */
 .donate-container {
   background-color: #272623;
   border: none;
@@ -389,40 +432,362 @@ body.scrolled header.header {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .donate-container p {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color: #ccc;
-  text-align: center;
 }
 
 .donate-container:hover {
-  background-color: #ffb347;
+  background-color: #140429;
 }
 
+.center-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #18032e, #190538);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 15px rgba(37, 117, 252, 0.4);
+}
+.store-intro h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+}
+.store-intro p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #18032e, #190538);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 15px rgba(37, 117, 252, 0.4);
+}
+
+.section-subtitle h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+}
+
+.section-subtitle p {
+  font-size: 1.25rem;
+  opacity: 0.85;
+}
+
+.youtube-category {
+  padding: 2rem 1rem;
+  background: linear-gradient(to bottom, #0f0f0f, #1c1c1c);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.category-title {
+  color: #ff66c4;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.category-divider {
+  width: 60px;
+  height: 4px;
+  background: #ff66c4;
+  border: none;
+  margin: 0 auto 2rem;
+}
+
+.modern-donate {
+  background: linear-gradient(135deg, #18032e, #190538);
+  color: white;
+  text-align: center;
+  padding: 1.8rem 1rem;
+  border-radius: 12px;
+  margin: 2rem auto 4rem;
+  max-width: 400px;
+  box-shadow: 0 6px 12px rgba(37, 117, 252, 0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.modern-donate p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.donate-btn {
+  background: white;
+  color: #2575fc;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.donate-btn:hover {
+  background-color: #1a54cc;
+  color: white;
+}
+
+
+
+/* PAYPAL FORM */
 .paypal-form {
   display: flex;
   justify-content: center;
 }
 
+/* ABOUT ME SECTION */
+.about-me {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.about-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.6);
+}
+
+.brand-name {
+  background: linear-gradient(to right, #ff4d6d, #ff9671);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-intro,
+.about-outro {
+  margin: 1.5rem 0;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.about-list li {
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+/* SOCIAL LINKS */
+.social-title {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin-top: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 0.5rem 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  color: #00baff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255, 77, 109, 0.15);
+  color: #ff4d6d;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 77, 109, 0.3);
+}
+
+
+/* RESPONSIVE: MOBILE */
 @media (max-width: 600px) {
   .media-grid {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .media-card {
     padding: 1rem;
     margin: 1rem 0;
+    max-width: 90vw;
+    width: 100%;
   }
 
   .mini-gallery img.thumb {
-    width: 100px;
+    width: 90px;
+    height: auto;
   }
 
   .store-section-bg {
     padding: 1rem;
+    width: 95vw;
+    text-align: center; /* Center all text inside store sections */
+  }
+
+  .store-section-bg h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .store-section-bg h1 a {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .post-title {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+  }
+
+  .posts {
+    padding: 1rem;
+    max-width: 95vw;
+    margin: 1.5rem auto;
+  }
+
+  .social-links {
+    gap: 0.8rem;
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  .youtube {
+    padding-bottom: 5%; /* 16:9 ratio */
+    height: auto;
+  }
+
+  .youtube iframe {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .lightbox-gallery img.thumb {
+    width: 150px;
+  }
+
+  .gallery-card img.gallery-img {
+    height: 150px;
+  }
+
+  /* Center about page container on mobile */
+  .about-me {
+    margin: 3rem auto !important; /* vertical spacing and auto horizontal for centering */
+    padding: 2rem 1rem;            /* slightly smaller horizontal padding */
+    max-width: 95vw;              /* almost full viewport width */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .about-title {
+    white-space: normal;       /* Allow text to wrap */
+    word-wrap: break-word;     /* Break long words if needed */
+    overflow-wrap: break-word; /* Support for various browsers */
+    font-size: 2rem;           /* Slightly smaller font on mobile */
+    padding: 0 1rem;           /* Add some horizontal padding */
+  }
+
+  /* NEW: Center store page specific elements */
+
+  /* Center the links inside store-section-bg h1 */
+  .store-section-bg {
+    margin: 3rem auto !important; /* vertical spacing and auto horizontal for centering */
+    padding: 2rem 1rem;            /* slightly smaller horizontal padding */
+    max-width: 95vw;              /* almost full viewport width */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .store-section-bg h1 a {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* Center images inside store-gallery */
+  .store-gallery {
+    display: flex !important; /* Ensure flexbox for centering */
+    justify-content: center !important;
+    flex-wrap: wrap; /* allow wrapping */
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 95vw;
+  }
+
+  .store-gallery img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 8px; /* optional: nice rounded corners */
+  }
+
+  /* Center donate container content */
+  .donate-container {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Center PayPal donate form inside donate container */
+  .paypal-form {
+    display: inline-block;
+    margin: 0 auto;
   }
 }
