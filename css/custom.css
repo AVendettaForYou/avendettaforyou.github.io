@@ -1,3 +1,11 @@
+body {
+  background: url('/img/bg/bg-orbs.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #111; /* fallback */
+}
+
+
+
 /* Make the Hello-Friend-NG header sticky */
 header.header {
   position: sticky;
@@ -221,8 +229,9 @@ body.scrolled header.header {
 }
 
 .gallery-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(145, 71, 255, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery-card img.gallery-img {
@@ -297,7 +306,7 @@ body.scrolled header.header {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   color: #fff;
   margin: 2rem auto;
-  max-width: 100%;
+  max-width: 75%;
 }
 
 .posts h1 {
