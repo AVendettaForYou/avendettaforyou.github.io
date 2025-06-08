@@ -189,878 +189,694 @@
 <div class="gallery-grid">
   
   
-    <a href="https://avendettaforyou.dev/img/gallery/orbs.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/orbs.png"
-         alt="orbs" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-    <div id="lightbox-modal" onclick="this.style.display='none'">
-      <img id="lightbox-img" src="" alt="Expanded Image" />
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/orbs.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/orbs.png"
+          alt="orbs"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
     </div>
   
-    <style>
-      div.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem 0;
-  }
+
   
-  div.gallery-grid a.lightbox img.gallery-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  div.gallery-grid a.lightbox img.gallery-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  }
-  
-   
-  #lightbox-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 0.3s ease forwards;
-  }
-  
-  #lightbox-modal img {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-    </style>
-  
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll(".lightbox").forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const src = this.getAttribute("href");
-            const modal = document.getElementById("lightbox-modal");
-            const modalImg = document.getElementById("lightbox-img");
-            modalImg.src = src;
-            modal.style.display = "flex";
-          });
-        });
-  
-        const modal = document.getElementById("lightbox-modal");
-        modal.addEventListener("click", function () {
-          this.style.display = "none";
-          const modalImg = document.getElementById("lightbox-img");
-          modalImg.src = "";
-        });
-      });
-    </script>
-  
-    
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/abstract.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/abstract.png"
+          alt="abstract"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/abstract.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/abstract.png"
-         alt="abstract" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/depth.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/depth.png"
+          alt="depth"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/depth.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/depth.png"
-         alt="depth" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/spiral.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/spiral.png"
+          alt="spiral"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/spiral.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/spiral.png"
-         alt="spiral" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/calypso.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/calypso.png"
+          alt="calypso"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/calypso.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/calypso.png"
-         alt="calypso" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/delivery.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/delivery.png"
+          alt="delivery"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/delivery.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/delivery.png"
-         alt="delivery" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/space.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/space.png"
+          alt="space"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/space.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/space.png"
-         alt="space" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/sandsoftime.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/sandsoftime.png"
+          alt="sandsoftime"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/sandsoftime.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/sandsoftime.png"
-         alt="sandsoftime" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/worldorb.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/worldorb.png"
+          alt="worldorb"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/worldorb.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/worldorb.png"
-         alt="worldorb" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/floater.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/floater.png"
+          alt="floater"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/floater.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/floater.png"
-         alt="floater" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/crystalfalls.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/crystalfalls.png"
+          alt="crystalfalls"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/crystalfalls.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/crystalfalls.png"
-         alt="crystalfalls" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/shuttle.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/shuttle.png"
+          alt="shuttle"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/shuttle.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/shuttle.png"
-         alt="shuttle" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/outward.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/outward.png"
+          alt="outward"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/outward.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/outward.png"
-         alt="outward" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/ambrosia.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/ambrosia.png"
+          alt="ambrosia"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/ambrosia.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/ambrosia.png"
-         alt="ambrosia" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/planet.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/planet.png"
+          alt="planet"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/planet.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/planet.png"
-         alt="planet" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/owlbert.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/owlbert.png"
+          alt="owlbert"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/owlbert.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/owlbert.png"
-         alt="owlbert" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/euphoria.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/euphoria.png"
+          alt="euphoria"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/euphoria.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/euphoria.png"
-         alt="euphoria" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/timeless.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/timeless.png"
+          alt="timeless"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/timeless.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/timeless.png"
-         alt="timeless" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/cliffs.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/cliffs.jpg"
+          alt="cliffs"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/cliffs.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/cliffs.jpg"
-         alt="cliffs" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/woody.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/woody.png"
+          alt="woody"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/woody.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/woody.png"
-         alt="woody" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/treeoflife.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/treeoflife.png"
+          alt="treeoflife"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/treeoflife.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/treeoflife.png"
-         alt="treeoflife" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/unid.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/unid.png"
+          alt="unid"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/unid.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/unid.png"
-         alt="unid" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/spiraled.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/spiraled.png"
+          alt="spiraled"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/spiraled.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/spiraled.png"
-         alt="spiraled" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/tripped.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/tripped.png"
+          alt="tripped"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/tripped.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/tripped.png"
-         alt="tripped" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/tree.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/tree.png"
+          alt="tree"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/tree.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/tree.png"
-         alt="tree" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/hotfudge.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/hotfudge.jpg"
+          alt="hotfudge"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/hotfudge.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/hotfudge.jpg"
-         alt="hotfudge" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/oceanside.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/oceanside.png"
+          alt="oceanside"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/oceanside.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/oceanside.png"
-         alt="oceanside" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/flower.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/flower.png"
+          alt="flower"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/flower.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/flower.png"
-         alt="flower" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/lost.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/lost.png"
+          alt="lost"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/lost.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/lost.png"
-         alt="lost" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/body.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/body.png"
+          alt="body"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/body.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/body.png"
-         alt="body" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/smoked.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/smoked.png"
+          alt="smoked"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/smoked.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/smoked.png"
-         alt="smoked" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/mythic.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/mythic.png"
+          alt="mythic"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/mythic.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/mythic.png"
-         alt="mythic" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/mountains.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/mountains.png"
+          alt="mountains"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/mountains.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/mountains.png"
-         alt="mountains" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/nightforest.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/nightforest.png"
+          alt="nightforest"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/nightforest.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/nightforest.png"
-         alt="nightforest" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/forest.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/forest.png"
+          alt="forest"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/forest.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/forest.png"
-         alt="forest" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/mesmer.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/mesmer.png"
+          alt="mesmer"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/mesmer.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/mesmer.png"
-         alt="mesmer" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/palm.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/palm.png"
+          alt="palm"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/palm.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/palm.png"
-         alt="palm" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/astronugs.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/astronugs.jpg"
+          alt="astronugs"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/gallery/astronugs.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/astronugs.jpg"
-         alt="astronugs" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
-  
-
-  
-    <a href="https://avendettaforyou.dev/img/gallery/squatch.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/gallery/squatch.png"
-         alt="squatch" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/gallery/squatch.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/gallery/squatch.png"
+          alt="squatch"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
 
 </div>
-</div>
-<div class="gallery-category">
 <h2 class="post-title" style="text-align:center; font-size: 2rem; margin-top: 2rem;">Photography</h2>
 <div class="gallery-grid">
   
   
-    <a href="https://avendettaforyou.dev/img/irl/1.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/1.jpg"
-         alt="1" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/1.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/1.jpg"
+          alt="1"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/2.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/2.jpg"
-         alt="2" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/2.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/2.jpg"
+          alt="2"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/3.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/3.jpg"
-         alt="3" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/3.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/3.jpg"
+          alt="3"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/4.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/4.jpg"
-         alt="4" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/4.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/4.jpg"
+          alt="4"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/5.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/5.jpg"
-         alt="5" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/5.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/5.jpg"
+          alt="5"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/6.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/6.jpg"
-         alt="6" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/6.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/6.jpg"
+          alt="6"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/7.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/7.jpg"
-         alt="7" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/7.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/7.jpg"
+          alt="7"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/8.JPG" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/8.JPG"
-         alt="8" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/8.JPG" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/8.JPG"
+          alt="8"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/9.png" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/9.png"
-         alt="9" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/9.png" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/9.png"
+          alt="9"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
   
-    <a href="https://avendettaforyou.dev/img/irl/10.jpg" class="lightbox">
-      <img
-        src="https://avendettaforyou.dev/img/irl/10.jpg"
-         alt="10" 
-        class="gallery-img"
-        
-      />
-    </a>
-  
-  
-  
-  
-  
+    <div class="gallery-card">
+      <a href="https://avendettaforyou.dev/img/irl/10.jpg" class="lightbox">
+        <img
+          src="https://avendettaforyou.dev/img/irl/10.jpg"
+          alt="10"
+          class="gallery-img"
+          loading="lazy"
+          
+        />
+      </a>
+    </div>
   
 
 
@@ -1077,6 +893,61 @@
             
             
   		</div>
+
+
+  
+  <div id="lightbox-modal" role="dialog" tabindex="-1">
+  <img id="lightbox-img" src="" alt="Expanded view" />
+</div>
+
+<style>
+  #lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #lightbox-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("lightbox-modal");
+    const modalImg = document.getElementById("lightbox-img");
+
+    document.querySelectorAll(".lightbox").forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        modalImg.src = this.href;
+        modal.style.display = "flex";
+      });
+    });
+
+    modal.addEventListener("click", () => {
+      modal.style.display = "none";
+      modalImg.src = "";
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        modal.style.display = "none";
+        modalImg.src = "";
+      }
+    });
+  });
+</script>
+
+
     </main>
 
       </div>

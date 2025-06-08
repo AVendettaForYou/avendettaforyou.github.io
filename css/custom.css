@@ -34,11 +34,9 @@ body.scrolled header.header {
   width: 100%;
   text-align: center;
   margin: 2rem 0 1rem;
-
-  /* Restore expected styles */
-  font-size: 2rem;       /* Adjust to match theme */
+  font-size: 2rem;
   font-weight: bold;
-  color: #fff;           /* Or inherit if preferred */
+  color: #fff;
   line-height: 1.2;
 }
 
@@ -56,7 +54,7 @@ body.scrolled header.header {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
-  text-align: center;   /* This centers the text */
+  text-align: center;
   font-style: italic;
 }
 
@@ -103,7 +101,7 @@ body.scrolled header.header {
 }
 
 .media-card h2 {
-  margin: 0 0 0.5rem 0; /* No top margin */
+  margin: 0 0 0.5rem 0;
   padding: 0;
   line-height: 1.2;
   text-align: center;
@@ -113,6 +111,7 @@ body.scrolled header.header {
   text-decoration: none;
   color: inherit;
 }
+
 .lightbox-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -178,7 +177,7 @@ body.scrolled header.header {
 }
 
 .mini-gallery-container {
-  background-color: rgba(20, 20, 20, 0.4); /* Subtle dark translucent background */
+  background-color: rgba(20, 20, 20, 0.4);
   padding: 1rem;
   border-radius: 12px;
   backdrop-filter: blur(4px);
@@ -204,29 +203,52 @@ body.scrolled header.header {
 }
 
 .gallery-grid {
-  display: grid;  /* or flex */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  width: 100%;   /* make sure it doesn’t overflow */
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 0;
 }
 
-.gallery-grid a {
-  display: block;  /* so width applies well */
+.gallery-card {
+  background: rgba(255, 255, 255, 0.014);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.gallery-card img.gallery-img {
   width: 100%;
-  overflow: hidden; /* optional to clip any overflow */
-  box-sizing: border-box;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.gallery-img {
-  width: 100%;   /* fill the link width */
-  height: auto;  /* keep aspect ratio */
-  display: block;
+.gallery-card:hover img.gallery-img {
+  transform: scale(1.03);
+}
+
+.gallery-caption {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 .youtube {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
@@ -260,15 +282,14 @@ body.scrolled header.header {
   background: #007bff;
 }
 
-/* Override default post width */
 .main .posts {
-  max-width: 100% !important; /* Or 90%, or 1200px if you want a cap */
+  max-width: 100% !important;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 .posts {
-  background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 2rem;
   border-radius: 12px;
   backdrop-filter: blur(4px);
@@ -302,7 +323,6 @@ body.scrolled header.header {
   background-color: #772ce8;
 }
 
-
 .preview-image {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 8px;
@@ -325,8 +345,8 @@ body.scrolled header.header {
   border-radius: 20px;
   padding: 2rem;
   margin: 2rem auto;
-  width: 90%; /* Change from 50% */
-  max-width: 1000px; /* Optional: limit on large screens */
+  width: 90%;
+  max-width: 1000px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   transition: background 0.3s ease;
 }
@@ -353,7 +373,7 @@ body.scrolled header.header {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color: #ccc;
-  text-align: center; /* ← This is what centers the text */
+  text-align: center;
 }
 
 .donate-container:hover {
@@ -365,7 +385,6 @@ body.scrolled header.header {
   justify-content: center;
 }
 
-/* Responsive layout for small screens */
 @media (max-width: 600px) {
   .media-grid {
     flex-direction: column;
