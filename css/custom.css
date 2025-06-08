@@ -4,7 +4,14 @@ body {
   background-color: #111; /* fallback */
 }
 
-
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  filter: blur(40px);
+  z-index: -1;
+}
 
 /* Make the Hello-Friend-NG header sticky */
 header.header {
@@ -84,8 +91,14 @@ body.scrolled header.header {
   margin: 2rem auto;
   width: 100%;
   max-width: 350px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  transition: background 0.3s ease;
+  box-shadow: 0 15px 15px rgba(145, 71, 255, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 20px 20px rgba(145, 71, 255, 0.65);
 }
 
 .media-card img {
