@@ -293,7 +293,7 @@ body.scrolled header.header {
   padding: 2rem 1rem;
   border-radius: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 8px 15px rgba(37, 117, 252, 0.4);
+  box-shadow: 0 8px 15px rgba(145, 71, 255, 0.5);
 }
 .gallery-intro h1 {
   margin-bottom: 0.5rem;
@@ -461,7 +461,7 @@ body.scrolled header.header {
   padding: 2rem 1rem;
   border-radius: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 8px 15px rgba(37, 117, 252, 0.4);
+  box-shadow: 0 8px 15px rgba(145, 71, 255, 0.5);
 }
 .store-intro h1 {
   margin-bottom: 0.5rem;
@@ -480,7 +480,7 @@ body.scrolled header.header {
   padding: 2rem 1rem;
   border-radius: 12px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 8px 15px rgba(37, 117, 252, 0.4);
+  box-shadow: 0 8px 15px rgba(145, 71, 255, 0.5);
 }
 
 .section-subtitle h1 {
@@ -524,7 +524,7 @@ body.scrolled header.header {
   border-radius: 12px;
   margin: 2rem auto 4rem;
   max-width: 400px;
-  box-shadow: 0 6px 12px rgba(37, 117, 252, 0.5);
+  box-shadow: 0 6px 12px rgba(145, 71, 255, 0.5);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .modern-donate p {
@@ -546,6 +546,91 @@ body.scrolled header.header {
   background-color: #1a54cc;
   color: white;
 }
+
+/* Target nav links with href containing 'donate' */
+.header a[href*="donate"] {
+  color: #ff66c4 !important;
+  border-radius: 20px;
+  font-weight: 600;
+
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.donate-page {
+  background: rgba(255, 255, 255, 0.014);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 15px 15px rgba(145, 71, 255, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.donate-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.donate-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.donate-benefits {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.donate-benefits li {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  padding-left: 1.6em;
+  position: relative;
+  color: #ffffff;
+}
+
+.donate-benefits li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.donate-callout {
+  background: linear-gradient(135deg, #18032e, #190538);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  box-shadow: 0 6px 12px rgba(145, 71, 255, 0.5);
+}
+
+.donate-callout p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.paypal-form {
+  display: inline-block;
+}
+
 
 
 
