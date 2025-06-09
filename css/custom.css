@@ -68,6 +68,47 @@ body.scrolled header.header {
   display: inline-block;
 }
 
+/* Resident Evil Page Styling */
+
+.resident-evil-page {
+  background: radial-gradient(ellipse at top, #000000 0%, #111111 80%);
+  background-image: url('/img/overlays/vhs-grain.png'); /* optional, remove if not available */
+  background-repeat: repeat;
+  padding: 2rem 1rem;
+  color: #ddd;
+}
+
+.resident-evil-page .media-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 0, 50, 0.2);
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.resident-evil-page .media-card h2 {
+  color: #ff3366;
+  text-shadow: 0 0 10px #ff3366;
+}
+
+.resident-evil-page .media-card p,
+.resident-evil-page .media-caption {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Lightbox gallery images */
+.resident-evil-page .media-block__gallery img {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resident-evil-page .media-block__gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 0, 60, 0.4);
+}
+
 /* POST CONTENT */
 .post-content {
   background: rgba(255, 255, 255, 0.014);
@@ -317,6 +358,8 @@ body.scrolled header.header {
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
+  border-radius: 12px; /* add border-radius here to clip flicker too */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .youtube iframe {
@@ -326,7 +369,7 @@ body.scrolled header.header {
   height: 100%;
   border: 0;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
 
 /* PRIVACY CENTER */
@@ -340,25 +383,27 @@ body.scrolled header.header {
 .download-link,
 .download-btn {
   display: inline-block;
-  background: #1e90ff;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+  /* Remove conflicting background here */
 }
 
-.download-link:hover,
-.download-btn:hover {
-  background: #007bff;
+/* Separate colors for each */
+.download-link {
+  background-color: #9147ff;
+}
+
+.download-link:hover {
+  background-color: #772ce8;
 }
 
 .download-btn {
   background-color: #9147ff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
 }
 
 .download-btn:hover {
@@ -642,6 +687,10 @@ body.scrolled header.header {
   display: inline-block;
 }
 
+.tv-guide-btn:hover {
+  background: #ffb84d;
+  color: #000;
+}
 
 .store-wrapper {
   display: grid;
