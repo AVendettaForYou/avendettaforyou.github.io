@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="&lt;!DOCTYPE html&gt;Retro TV ChannelNow Playing: Resident Evil" />
+<meta name="description" content="Now Playing: Resident Evil" />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,21 +44,21 @@
 
 
   <meta itemprop="name" content="Channel 1">
-  <meta itemprop="description" content="&lt;!DOCTYPE html&gt;Retro TV ChannelNow Playing: Resident Evil">
-  <meta itemprop="wordCount" content="9">
+  <meta itemprop="description" content="Now Playing: Resident Evil">
+  <meta itemprop="wordCount" content="4">
   <meta itemprop="image" content="https://avendettaforyou.dev/img/webimg.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://avendettaforyou.dev/img/webimg.png">
   <meta name="twitter:title" content="Channel 1">
-  <meta name="twitter:description" content="&lt;!DOCTYPE html&gt;Retro TV ChannelNow Playing: Resident Evil">
+  <meta name="twitter:description" content="Now Playing: Resident Evil">
 
 
 
     <meta property="og:url" content="https://avendettaforyou.dev/channel1/">
   <meta property="og:site_name" content="AVendettaForYou">
   <meta property="og:title" content="Channel 1">
-  <meta property="og:description" content="&lt;!DOCTYPE html&gt;Retro TV ChannelNow Playing: Resident Evil">
+  <meta property="og:description" content="Now Playing: Resident Evil">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="og:image" content="https://avendettaforyou.dev/img/webimg.png">
@@ -197,177 +197,76 @@
             
 
             <div class="post-content">
-                <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Retro TV Channel</title>
-  <style>
-    body {
-      background: radial-gradient(circle at center, #000 0%, #111 100%);
-      margin: 0;
-      font-family: 'Courier New', monospace;
-      color: #ffa500;
-    }
-
-    #tv-container {
-      position: relative;
-      width: 100%;
-      max-width: 913px;
-      margin: 2rem auto;
-    }
-
-    #tv-frame {
-      position: absolute;
-      top: 20px;
-      left: 10px;
-      width: 698px;
-      height: 568px;
-      border-radius: 10px;
-      z-index: 1;
-    }
-
-    #tv-overlay {
-      width: 100%;
-      height: auto;
-      z-index: 2;
-      position: relative;
-      pointer-events: none;
-    }
-
-    #now-playing {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-      color: #ffa500;
-      text-shadow: 0 0 4px #f0c420;
-    }
-
-    #tv-guide {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.5rem;
-      max-width: 700px;
-      margin: 2rem auto;
-      background: rgba(0, 0, 0, 0.7);
-      border: 2px solid #ffa500;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #f0c420;
-    }
-
-    .tv-btn {
-      background: #000;
-      color: #ffa500;
-      padding: 0.6rem;
-      border: 1px solid #f0c420;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      text-align: center;
-      transition: background 0.3s;
-    }
-
-    .tv-btn:hover,
-    .tv-btn.active {
-      background: #ffa500;
-      color: #000;
-      font-weight: bold;
-    }
-
-    #static {
-      position: absolute;
-      top: 20px;
-      left: 10px;
-      width: 698px;
-      height: 568px;
-      z-index: 1;
-      pointer-events: none;
-      background: url('/img/static.gif') center center / cover no-repeat;
-      opacity: 0.10;
-      mix-blend-mode: screen;
-    }
-
-    @media (max-width: 768px) {
-      #tv-frame, #static {
-        width: 100% !important;
-        height: auto !important;
-        left: 0;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div id="tv-container">
+                <div id="tv-container">
+  <div id="tv-screen">
     <iframe
       id="tv-frame"
-      src="https://www.youtube.com/embed/9aWEsmZBMU0?rel=0"
-      frameborder="0"
+      src="https://www.youtube.com/embed/9aWEsmZBMU0?rel=0&autoplay=1"
       allowfullscreen
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-    </iframe>
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
     <div id="static"></div>
-    <img id="tv-overlay" src="https://avendettaforyou.dev/img/retro-tv.png" alt="Retro TV" />
   </div>
+  <img id="tv-overlay" src="https://avendettaforyou.dev/img/retro-tv.png" alt="Retro TV" />
+</div>
 
-  <div id="now-playing">Now Playing: <span id="current-title">Resident Evil</span></div>
+<div id="now-playing">
+  Now Playing: <span id="current-title">Resident Evil</span>
+</div>
 
-  <div id="tv-guide"></div>
+<div id="tv-guide"></div>
 
-  <script>
-    const videos = [
-      "9aWEsmZBMU0",
-      "XQljnLgZZMg",
-      "K6q09omauxc",
-      "I0rztbvABMA",
-      "0_sNQq55nW0",
-      "Qcl6zoP3PKY",
-      "hwORGrayp44",
-      "SMqeEJcZuBo",
-      "iSh1DC5vZsY"
-    ];
-    const titles = [
-      "Resident Evil",
-      "Scooby-Doo",
-      "Cryptids",
-      "Sesame Street",
-      "Shrek",
-      "Shrek Part 2",
-      "Spongebob",
-      "Mario",
-      "Teletubbies"
-    ];
+<script>
+  const videos = [
+    "9aWEsmZBMU0",
+    "XQljnLgZZMg",
+    "K6q09omauxc",
+    "I0rztbvABMA",
+    "0_sNQq55nW0",
+    "Qcl6zoP3PKY",
+    "hwORGrayp44",
+    "SMqeEJcZuBo",
+    "iSh1DC5vZsY"
+  ];
+  const titles = [
+    "Resident Evil",
+    "Scooby-Doo",
+    "Cryptids",
+    "Sesame Street",
+    "Shrek",
+    "Shrek Part 2",
+    "Spongebob",
+    "Mario",
+    "Teletubbies"
+  ];
 
-    const guide = document.getElementById("tv-guide");
-    const iframe = document.getElementById("tv-frame");
-    const titleDisplay = document.getElementById("current-title");
+  const guide = document.getElementById("tv-guide");
+  const iframe = document.getElementById("tv-frame");
+  const titleDisplay = document.getElementById("current-title");
 
-    let current = parseInt(localStorage.getItem("tv-channel")) || 0;
+  let current = parseInt(localStorage.getItem("tv-channel")) || 0;
 
-    function updateChannel(index) {
-      current = index;
-      localStorage.setItem("tv-channel", current);
-      iframe.src = `https://www.youtube.com/embed/${videos[current]}?rel=0&autoplay=1`;
-      titleDisplay.textContent = titles[current];
-      document.querySelectorAll(".tv-btn").forEach((btn, idx) => {
-        btn.classList.toggle("active", idx === current);
-      });
-    }
-
-    videos.forEach((video, i) => {
-      const btn = document.createElement("button");
-      btn.className = "tv-btn";
-      btn.textContent = titles[i];
-      btn.addEventListener("click", () => updateChannel(i));
-      if (i === current) btn.classList.add("active");
-      guide.appendChild(btn);
+  function updateChannel(index) {
+    current = index;
+    localStorage.setItem("tv-channel", current);
+    iframe.src = `https://www.youtube.com/embed/${videos[current]}?rel=0&autoplay=1`;
+    titleDisplay.textContent = titles[current];
+    document.querySelectorAll(".tv-btn").forEach((btn, idx) => {
+      btn.classList.toggle("active", idx === current);
     });
+  }
 
-    updateChannel(current);
-  </script>
-</body>
-</html>
+  videos.forEach((video, i) => {
+    const btn = document.createElement("button");
+    btn.className = "tv-btn";
+    btn.textContent = titles[i];
+    btn.addEventListener("click", () => updateChannel(i));
+    if (i === current) btn.classList.add("active");
+    guide.appendChild(btn);
+  });
+
+  updateChannel(current);
+</script>
 
 
             </div>
