@@ -379,6 +379,10 @@ body.scrolled header.header {
   margin: 0 auto;
 }
 
+.content h1 {
+  font-family: monospace;
+}
+
 /* DOWNLOAD LINK BUTTONS */
 .download-link,
 .download-btn {
@@ -426,6 +430,10 @@ body.scrolled header.header {
   color: #fff;
   margin: 2rem auto;
   max-width: 75%;
+}
+
+body.home h1 {
+  font-family: monospace, monospace;
 }
 
 .posts h1 {
@@ -794,6 +802,7 @@ body.scrolled header.header {
 
 /* ABOUT ME SECTION */
 .about-me {
+  margin-top: 50rem;
   max-width: 800px;
   margin: 4rem auto;
   padding: 3rem 2rem;
@@ -1007,8 +1016,7 @@ body.scrolled header.header {
     color: #000;
     font-weight: bold;
   }
-
-
+  
 /* RESPONSIVE: MOBILE */
 @media (max-width: 600px) {
   .media-grid {
