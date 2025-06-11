@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="Now Playing: Resident Evil" />
+<meta name="description" content="Now Playing: Loading..." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -44,21 +44,21 @@
 
 
   <meta itemprop="name" content="Channel 1">
-  <meta itemprop="description" content="Now Playing: Resident Evil">
-  <meta itemprop="wordCount" content="4">
+  <meta itemprop="description" content="Now Playing: Loading...">
+  <meta itemprop="wordCount" content="3">
   <meta itemprop="image" content="https://avendettaforyou.dev/img/webimg.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://avendettaforyou.dev/img/webimg.png">
   <meta name="twitter:title" content="Channel 1">
-  <meta name="twitter:description" content="Now Playing: Resident Evil">
+  <meta name="twitter:description" content="Now Playing: Loading...">
 
 
 
     <meta property="og:url" content="https://avendettaforyou.dev/channel1/">
   <meta property="og:site_name" content="avendettaforyou">
   <meta property="og:title" content="Channel 1">
-  <meta property="og:description" content="Now Playing: Resident Evil">
+  <meta property="og:description" content="Now Playing: Loading...">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="og:image" content="https://avendettaforyou.dev/img/webimg.png">
@@ -199,93 +199,98 @@
             <div class="post-content">
                 <div id="tv-container">
   <div id="tv-screen">
-    <iframe
-      id="tv-frame"
-      src="https://www.youtube.com/embed/9aWEsmZBMU0?rel=0&autoplay=1"
-      allowfullscreen
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    ></iframe>
+    <div id="tv-frame"></div> 
     <div id="static"></div>
   </div>
   <img id="tv-overlay" src="https://avendettaforyou.dev/img/retro-tv.png" alt="Retro TV" />
 </div>
 
 <div id="now-playing">
-  Now Playing: <span id="current-title">Resident Evil</span>
+  Now Playing: <span id="current-title">Loading...</span>
 </div>
 
 <div id="tv-guide"></div>
 
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
 <script>
   const videos = [
-    "9aWEsmZBMU0",
-    "XQljnLgZZMg",
-    "K6q09omauxc",
-    "I0rztbvABMA",
-    "0_sNQq55nW0",
-    "Qcl6zoP3PKY",
-    "hwORGrayp44",
-    "SMqeEJcZuBo",
-    "iSh1DC5vZsY",
-    "vjMQBQjLouM",
-    "AADUFjY980U",
-    "rhTorgF7ETo",
-    "vplaJSjhZJ0",
-    "jOk8_wJh2mw",
-    "_lrRgcLrWXo",
-    "yr1SNwVmcLI",
-    "XqiFgN-_mzU",
-    "3v1OiWcqOWc",
-    "ra12jyH1pEY"
-  ];
-  const titles = [
-    "Resident Evil",
-    "Scooby-Doo",
-    "Cryptids",
-    "Sesame Street",
-    "Shrek",
-    "Shrek Part 2",
-    "Spongebob",
-    "Mario",
-    "Teletubbies",
-    "Bear in the Big Blue House",
-    "Lovecraft Cryptids",
-    "Dark Crystal - Game of Thrones",
-    "The Fifth Element",
-    "King of the Hill",
-    "He-Man",
-    "Hansel and Gretel",
-    "Frozen",
-    "Courage the Cowardly Dog",
-    "Blue's Clues"
+    "9aWEsmZBMU0", "XQljnLgZZMg", "K6q09omauxc", "I0rztbvABMA",
+    "0_sNQq55nW0", "Qcl6zoP3PKY", "hwORGrayp44", "SMqeEJcZuBo",
+    "iSh1DC5vZsY", "vjMQBQjLouM", "AADUFjY980U", "rhTorgF7ETo",
+    "vplaJSjhZJ0", "jOk8_wJh2mw", "_lrRgcLrWXo", "yr1SNwVmcLI",
+    "XqiFgN-_mzU", "3v1OiWcqOWc", "ra12jyH1pEY"
   ];
 
-  const guide = document.getElementById("tv-guide");
-  const iframe = document.getElementById("tv-frame");
-  const titleDisplay = document.getElementById("current-title");
+  const titles = [
+    "Resident Evil", "Scooby-Doo", "Cryptids", "Sesame Street",
+    "Shrek", "Shrek Part 2", "Spongebob", "Mario",
+    "Teletubbies", "Bear in the Big Blue House", "Lovecraft Cryptids", "Dark Crystal - Game of Thrones",
+    "The Fifth Element", "King of the Hill", "He-Man", "Hansel and Gretel",
+    "Frozen", "Courage the Cowardly Dog", "Blue's Clues"
+  ];
 
   let current = parseInt(localStorage.getItem("tv-channel")) || 0;
+  let player;
 
-  function updateChannel(index) {
-    current = index;
-    localStorage.setItem("tv-channel", current);
-    iframe.src = `https://www.youtube.com/embed/${videos[current]}?rel=0&autoplay=1`;
-    titleDisplay.textContent = titles[current];
-    document.querySelectorAll(".tv-btn").forEach((btn, idx) => {
-      btn.classList.toggle("active", idx === current);
+  const titleDisplay = document.getElementById("current-title");
+  const guide = document.getElementById("tv-guide");
+
+  function updateGuideButtons() {
+    guide.innerHTML = "";
+    videos.forEach((_, i) => {
+      const btn = document.createElement("button");
+      btn.className = "tv-btn";
+      btn.textContent = titles[i];
+      if (i === current) btn.classList.add("active");
+      btn.addEventListener("click", () => {
+        current = i;
+        localStorage.setItem("tv-channel", current);
+        player.loadVideoById(videos[current]);
+        titleDisplay.textContent = titles[current];
+        updateGuideButtons();
+      });
+      guide.appendChild(btn);
     });
   }
 
-  videos.forEach((video, i) => {
-    const btn = document.createElement("button");
-    btn.className = "tv-btn";
-    btn.textContent = titles[i];
-    btn.addEventListener("click", () => updateChannel(i));
-    if (i === current) btn.classList.add("active");
-    guide.appendChild(btn);
-  });
+  function onPlayerReady(event) {
+    titleDisplay.textContent = titles[current];
+    updateGuideButtons();
+    event.target.playVideo();
+  }
 
-  updateChannel(current);
+  function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+      current = (current + 1) % videos.length;
+      localStorage.setItem("tv-channel", current);
+      player.loadVideoById(videos[current]);
+      titleDisplay.textContent = titles[current];
+      updateGuideButtons();
+    }
+  }
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player("tv-frame", {
+      height: "100%",
+      width: "100%",
+      videoId: videos[current],
+      playerVars: {
+        autoplay: 1,
+        rel: 0,
+        modestbranding: 1,
+        controls: 1,
+        showinfo: 0
+      },
+      events: {
+        onReady: onPlayerReady,
+        onStateChange: onPlayerStateChange
+      }
+    });
+  }
+
+  window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
 </script>
 
 
